@@ -4,12 +4,11 @@
     require_once dirname(__FILE__).'/include/navbar.php';
 
     $api = new API;
-    $response = $api->getExpiredProducts();
+    $response = $api->getSellers();
 ?>
-
 <?php if(!$response->error) 
   {
-    $products = $response->products;
+    $sellers = $response->sellers;
   ?>
     <div class="socialcodia" style="margin-top: -30px">
         <div class="row">
@@ -17,7 +16,7 @@
                 <div class="card z-depth-0">
                     <div class="card-content">
                         <div class="input-field">
-                            <input type="text" name="productName" id="productName" placeholder="" onkeyup="filterProduct()">
+                            <input type="text" name="productName" autocomplete="off" id="productName" placeholder="" onkeyup="filterProduct()">
                             <label for="productName">Enter Product Name</label>
                         </div>
                     </div>
@@ -28,34 +27,29 @@
                         <thead>
                           <tr>
                               <th>Sr No</th>
-                              <th>Category</th>
+                              <th>Image</th>
                               <th>Name</th>
-                              <th>Size</th>
-                              <th>Price</th>
-                              <th>Quantity</th>
-                              <th>Location</th>
-                              <th>Brand</th>
-                              <th>Manufacture</th>
-                              <th>Expire</th>
+                              <th>Email</th>
+                              <th>Mobile Number</th>
+                              <th>Address</th>
                           </tr>
                         </thead>
                         <tbody style="font-family: holo">
                           <tr>
                             <?php
                             $count = 1;
-                              foreach ($products as $product)
+                              foreach ($sellers as $seller)
                               {
+                                $image = $seller->sellerImage;
+                                if (!isset($image) && empty($image))
+                                  $image = 'src/img/user.png';
                                 echo "<tr>";
                                 echo "<td>$count</td>";
-                                echo "<td>$product->productCategory</td>";
-                                echo "<td class='blue-text darken-4'>$product->productName</td>";
-                                echo "<td style='font-weight:bold'>$product->productSize</td>";
-                                echo "<td class='blue-text darken-4'>$product->productPrice</td>";
-                                echo "<td>$product->productQuantity</td>";
-                                echo "<td>$product->productLocation</td>";
-                                echo "<td class='blue-text darken-4'>$product->productBrand</td>";
-                                echo "<td>$product->productManufacture</td>";
-                                echo "<td class='red-text'>$product->productExpire</td>";
+                                echo "<td><a href='seller?sid=$seller->sellerId'><img src='$image' class='circle' style='width:50px; border:2px solid red'/></a></td>";
+                                echo "<td class='blue-text darken-4'><a href='seller?sid=$seller->sellerId'>$seller->sellerFirstName $seller->sellerLastName</a></td>";
+                                echo "<td style='font-weight:bold'>$seller->sellerEmail</td>";
+                                echo "<td class='blue-text darken-4'>$seller->sellerContactNumber , $seller->sellerContactNumber1</td>";
+                                echo "<td>$seller->sellerAddress</td>";
                                 $count++;
                                 echo "</tr>";
                               }
@@ -69,20 +63,19 @@
         </div>
     </div>
 
-  <?php }
+ <?php }
   else
   {
     ?>
 
     <div class="socialcodia center">
-          <h4>No Expired Products Found</h4>
+          <h4>No Sellers Found</h4>
           <img class="verticalCenter socialcodia" src="src/img/empty_cart.svg">
     </div>
 
     <?php
   }
   ?>
-
 
 <?php require_once dirname(__FILE__).'/include/sidenav.php'; ?>
 <?php require_once dirname(__FILE__).'/include/footer.php'; ?>

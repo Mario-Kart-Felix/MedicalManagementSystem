@@ -16,7 +16,7 @@
                 <div class="card z-depth-0">
                     <div class="card-content">
                         <div class="input-field">
-                            <input type="text" name="productName" id="productName" placeholder="" onkeyup="filterProduct()">
+                            <input type="text" name="productName" autocomplete="off" id="productName" placeholder="" onkeyup="filterProduct()">
                             <label for="productName">Enter Product Name</label>
                         </div>
                     </div>
@@ -36,6 +36,7 @@
                               <th>Brand</th>
                               <th>Manufacture</th>
                               <th>Expire</th>
+                              <th>Action</th>
                           </tr>
                         </thead>
                         <tbody style="font-family: holo">
@@ -47,14 +48,15 @@
                                 echo "<tr>";
                                 echo "<td>$count</td>";
                                 echo "<td>$product->productCategory</td>";
-                                echo "<td>$product->productName</td>";
+                                echo "<td class='blue-text darken-4'>$product->productName</td>";
                                 echo "<td style='font-weight:bold'>$product->productSize</td>";
-                                echo "<td>$product->productPrice</td>";
+                                echo "<td class='blue-text darken-4'>$product->productPrice</td>";
                                 echo "<td>$product->productQuantity</td>";
                                 echo "<td>$product->productLocation</td>";
-                                echo "<td>$product->productBrand</td>";
+                                echo "<td class='blue-text darken-4'>$product->productBrand</td>";
                                 echo "<td>$product->productManufacture</td>";
-                                echo "<td>$product->productExpire</td>";
+                                echo "<td class='red-text'>$product->productExpire</td>";
+                                echo '<td><a href="editproduct?pid='.$product->productId.'" style="border: 1px solid white;border-radius: 50%;" class="btn red"><i class="material-icons white-text">edit</i></a></td>';
                                 $count++;
                                 echo "</tr>";
                               }

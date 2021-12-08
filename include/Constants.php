@@ -1,11 +1,10 @@
 <?php
-define('API_URL', 'http://socialcodia.net/azmiunanistore/public/');		//Don't Forgot to put slash at the end of url
-// define('API_URL', 'http://111.111.111.111/SocialApiFriendsSystemVideoThumb/public/');		//Don't Forgot to put slash at the end of url
-define('WEBSITE_NAME', 'Social Ui');
+define('API_URL', 'http://socialcodia.net/unanipharmaapi/public/');		//Don't Forgot to put slash at the end of url
+define('WEBSITE_NAME', 'Unani Pharma');
 
 define('ERROR', 'error');
-define('USER_NOT_FOUND_IMAGE', 'http://socialcodia.net/SocialUiNew/src/img/user.png');
-define('VIDEO_NOT_FOUND_IMAGE', 'http://socialcodia.net/SocialUiNew/src/img/video_not_found.png');
+define('USER_NOT_FOUND_IMAGE', 'http://socialcodia.net/unanipharmaapi/src/img/user.png');
+define('VIDEO_NOT_FOUND_IMAGE', 'http://socialcodia.net/unanipharmaapi/src/img/video_not_found.png');
 
 
 

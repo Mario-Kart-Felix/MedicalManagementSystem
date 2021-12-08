@@ -18,6 +18,12 @@
         <li><a href="productsnotice"><i class="material-icons"><img src="src/icons/notice_1.png" width="25" alt=""></i> Products Notice</a></li>
         <li><a href="expiringproducts"><i class="material-icons"><img src="src/icons/notice.png" width="25" alt=""></i> Expiring Products</a></li>
         <li><a href="expiredproducts"><i class="material-icons"><img src="src/icons/danger.png" width="25" alt=""></i> Expired Products</a></li>
+        <li><a href="selltoseller"><i class="material-icons"><img src="src/icons/selltoseller.png" width="25" alt=""></i>Sell To Seller</a></li>
+        <li><a href="credits"><i class="material-icons"><img src="src/icons/credits.png" width="25" alt=""></i>Credits</a></li>
+        <li><a href="creditors"><i class="material-icons"><img src="src/icons/creditors.png" width="25" alt=""></i>Creditors</a></li>
+        <li><a href="invoices"><i class="material-icons"><img src="src/icons/invoices.png" width="25" alt=""></i>Invoices</a></li>
+        <li><a href="sellers"><i class="material-icons"><img src="src/icons/sellers.png" width="25" alt=""></i> All Sellers</a></li>
+        <li><a href="addseller"><i class="material-icons"><img src="src/icons/addseller.png" width="25" alt=""></i> Add Seller</a></li>
         <li><a href="addproduct"><i class="material-icons"><img src="src/icons/add_product.png" width="25" alt=""></i> Add Product</a></li>
         <li><a href="addproductsinfo"><i class="material-icons"><img src="src/icons/info.png" width="25" alt=""></i> Add Products Info</a></li>
 <!--         <li><a href="addbrand"><i class="material-icons"><img src="src/icons/brand.png" width="25" alt=""></i> Add Brand</a></li>

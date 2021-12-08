@@ -13,5 +13,16 @@ RewriteRule ^productsnotice?$ productsnotice.php
 RewriteRule ^expiredproducts?$ expiredproducts.php
 RewriteRule ^expiringproducts?$ expiringproducts.php
 RewriteRule ^addproductsinfo?$ addproductsinfo.php
+RewriteRule ^seller?$ seller.php
+RewriteRule ^addseller?$ addseller.php
+RewriteRule ^sellers?$ sellers.php
 RewriteRule ^productsrecord?$ productsrecord.php
+RewriteRule ^editproduct?$ editproduct.php
+RewriteRule ^selltoseller?$ selltoseller.php
+RewriteRule ^invoice?$ invoice.php
+RewriteRule ^payment?$ payment.php
+RewriteRule ^invoices?$ invoices.php
+RewriteRule ^credit?$ credit.php
+RewriteRule ^credits?$ credits.php
+RewriteRule ^creditors?$ creditors.php
 RewriteRule ^dashboard?$ dashboard.php
